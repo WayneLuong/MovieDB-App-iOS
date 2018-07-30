@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AppIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Li-I5-RIk">
+                                <rect key="frame" x="25" y="281" width="195" height="191"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="72" width="86" height="75"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wrapped!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="803-U3-XnT">
+                                <rect key="frame" x="77" y="230" width="91" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="84" y="93" width="156" height="63"/>
+                                </variation>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ijl-dh-ots">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <color key="backgroundColor" red="0.50595801770000004" green="0.0" blue="0.018753850339999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="Most Popular"/>
+                                    <segment title="Top Rated"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="17" y="168" width="342" height="29"/>
+                                </variation>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ggD-eR-3CH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.50595801770000004" green="0.0" blue="0.018753850339999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="22" y="214" width="326" height="402"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="Lnr-VB-yiI"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="Wfp-bp-b3V"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ijl-dh-ots"/>
+                                <exclude reference="ggD-eR-3CH"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ijl-dh-ots"/>
+                                <include reference="ggD-eR-3CH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="W5U-vK-q7e"/>
+                    <connections>
+                        <outlet property="popularTable" destination="ggD-eR-3CH" id="45C-dE-nOv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537.5" y="-696"/>
+        </scene>
+        <!--My Films-->
+        <scene sceneID="w3w-cW-kz8">
+            <objects>
+                <viewController id="fXp-YI-GIe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0bc-hJ-EIk"/>
+                        <viewControllerLayoutGuide type="bottom" id="I3L-zk-Jmj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="baW-Ko-TmD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search Movies" showsBookmarkButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="duK-v6-XAC">
+                                <rect key="frame" x="0.0" y="37" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="63" width="377" height="44"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="dkW-9O-Jn7" id="zKC-de-sHH"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="47" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kOD-FR-VDd">
+                                <rect key="frame" x="0.0" y="86" width="595" height="470"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.50595801770000004" green="0.0" blue="0.018753850339999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShowMovieDetails" rowHeight="47" id="ZNR-In-axL">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZNR-In-axL" id="J4V-sY-xK0">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="107" width="377" height="513"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="dkW-9O-Jn7" id="mji-u2-WQd"/>
+                                    <outlet property="delegate" destination="dkW-9O-Jn7" id="god-xL-v0R"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="duK-v6-XAC"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="duK-v6-XAC"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="My Films" id="wNR-2Y-a5s"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OyL-dB-qnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="dkW-9O-Jn7" customClass="FilmListViewController">
+                    <connections>
+                        <outlet property="navBar" destination="wNR-2Y-a5s" id="4cH-WL-sJc"/>
+                        <outlet property="searchBar" destination="duK-v6-XAC" id="DWQ-Of-gJc"/>
+                        <outlet property="view" destination="kOD-FR-VDd" id="NMG-Wc-A4n"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="1992" y="61"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="zMQ-44-Rom" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="qYO-XA-AbA" kind="relationship" relationship="viewControllers" id="0iH-xg-Fiw"/>
+                        <segue destination="mgu-Lw-zzR" kind="relationship" relationship="viewControllers" id="BXc-pX-FAL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-196" y="-650"/>
+        </scene>
+        <!--Movies-->
+        <scene sceneID="0Ed-2D-C3b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qYO-XA-AbA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Movies" image="film.png" id="qFO-iU-rY4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KeN-DL-QUZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <outlet property="delegate" destination="qYO-XA-AbA" id="G2Z-jt-HA7"/>
+                        </connections>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="1F1-6w-jDM">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <outlet property="delegate" destination="qFO-iU-rY4" id="J5I-rk-J1v"/>
+                        <segue destination="fXp-YI-GIe" kind="relationship" relationship="rootViewController" id="2Di-ws-hPm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BkG-eh-30t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249.5" y="49"/>
+        </scene>
+        <!--My TV Shows-->
+        <scene sceneID="ZSf-rY-67u">
+            <objects>
+                <viewController id="0I0-6p-qVX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3TT-g7-YKa"/>
+                        <viewControllerLayoutGuide type="bottom" id="9T1-8h-uLM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u6m-jV-z17">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search TV Shows" showsBookmarkButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UIx-2h-dcp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="377" height="44"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="h8D-RK-7Gt" id="Z8T-Gb-mGf"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Kdw-Og-GPI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.50595801770000004" green="0.0" blue="0.018753850339999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShowTVShowDetails" id="aKc-kw-FPO">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aKc-kw-FPO" id="HNl-tv-KNF">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="108" width="377" height="514"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="h8D-RK-7Gt" id="moW-es-JhQ"/>
+                                    <outlet property="delegate" destination="h8D-RK-7Gt" id="oBL-37-o9R"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="UIx-2h-dcp"/>
+                                <exclude reference="Kdw-Og-GPI"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="UIx-2h-dcp"/>
+                                <include reference="Kdw-Og-GPI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="My TV Shows" id="87l-FO-OCN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qoi-u6-mYu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="h8D-RK-7Gt" userLabel="TV List View Controller" customClass="TVListViewController">
+                    <connections>
+                        <outlet property="navBar" destination="87l-FO-OCN" id="fXs-x6-Q6w"/>
+                        <outlet property="searchBar" destination="UIx-2h-dcp" id="Qj6-8u-xkP"/>
+                        <outlet property="view" destination="Kdw-Og-GPI" id="HiP-kE-qc8"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="420" y="236"/>
+        </scene>
+        <!--TV Shows-->
+        <scene sceneID="ulx-Ck-JN1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mgu-Lw-zzR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TV Shows" image="TV.png" id="ipq-yW-Etg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QUB-dG-rPg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <outlet property="delegate" destination="QUB-dG-rPg" id="xaS-Lj-dbz"/>
+                        <segue destination="0I0-6p-qVX" kind="relationship" relationship="rootViewController" id="o7r-tA-LRt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xho-bD-Xqn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-486" y="236"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="ylL-3B-ETf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zMQ-44-Rom" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home.png" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dFc-jW-NBc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="2fm-op-ME2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mb4-9Z-WVJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726" y="-696"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AppIcon.png" width="120" height="120"/>
+        <image name="TV.png" width="30" height="30"/>
+        <image name="film.png" width="30" height="30"/>
+        <image name="home.png" width="30" height="30"/>
+    </resources>
+</document>
